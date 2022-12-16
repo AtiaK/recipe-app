@@ -8,7 +8,7 @@ router.get('/',async function(req, res, next) {
     try {
         const recipes=await RecipeModel.find({});
 
-        return res.status(200).send({message:"Data has been added!",data:recipes})
+        return res.status(200).send({data:recipes})
     } catch (error) {
         return res.status(400).send({message:"Error Occured!",error:error.message})
     }
